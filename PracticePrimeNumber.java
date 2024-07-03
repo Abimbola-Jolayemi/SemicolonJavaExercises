@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NoOfFactors{
+public class PracticePrimeNumber{
    public static void main(String []args){
 
 	Scanner input = new Scanner(System.in);
@@ -10,11 +10,15 @@ public class NoOfFactors{
 	System.out.print("Enter a number: ");
 	int number = input.nextInt();
 
-	for (int num = 2; num <= number; num++){
+	for (int num = 1; num <= number; num++){
 		if (number % num == 0){
 			count++;
 		}
 	}
-		System.out.print(count);
+		if (count == 2){
+		  System.out.print(number + " is a prime number");
+		} else {
+		  System.out.print(number + " is not a prime number");
+		}
    }
 }
