@@ -18,7 +18,7 @@ public class InvestmentValue {
    //Add 1 to the percentage interest rate
    double interestRatePlus1 = percentageMonthlyInterest + 1;
 
-   Get  the input for the number of years
+   //Get  the input for the number of years
    System.out.print ("Enter Number of Years: ");
    double noOfYears = input.nextDouble();
 
