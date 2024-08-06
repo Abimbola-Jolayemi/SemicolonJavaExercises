@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Trial{
 	public static void main(String []args){
@@ -10,8 +11,12 @@ public class Trial{
 		Question5 q5 = new Question5();
 		Question6 q6 = new Question6();
 		Question8 q8 = new Question8();
+		Question9 q9 = new Question9();
+		Question10 q10 = new Question10();
+		Question11 q11 = new Question11();
 
-		int[] num = {1, 4, 3, 2, 5, 8};
+		int[] num = {1, 2, 3, 4, 5};
+		
 		int result = q1.findLargestInteger(num);
 		System.out.println(result);
 		
@@ -26,10 +31,25 @@ public class Trial{
 
 	System.out.println(q6.computeTotal(num));
 
-	System.out.println(q8.sumUsingForLoop(num));
+	ArrayList<Integer> list2 = new ArrayList<>();
+	list2.add(6);
+	list2.add(6);
+	ArrayList<Integer> list3 = new ArrayList<>();
+	list3.add(11);
+	list3.add(11);
 
-	System.out.println(q8.sumUsingWhileLoop(num));
+	ArrayList<Integer> concartenatedList = new ArrayList<Integer>(q9.concartenateList(list2, list3));
 
-	System.out.println(q8.sumUsingDoWhileLoop(num));
+	System.out.println(concartenatedList);
+
+	int[] newList1 = {1, 2, 3};
+	int[] newList2 = {4, 5, 6};
+	int[] concartList = (q10.concartenateList(newList1, newList2));
+
+	System.out.println(Arrays.toString(concartList));
+
+	int numbers= 12345;
+
+	System.out.print(Arrays.toString(q11.returnArray(numbers)));
 	}
 }
