@@ -24,7 +24,7 @@ public class MbtiPersonalityTest{
 				};
 
 	for(int questionNumber = 0; questionNumber < 5; questionNumber++){
-		System.out.println("Question" + questionNumber + ":" + " " + questionEI[questionNumber]);
+		System.out.println("Question" + (questionNumber+1) + ":" + " " + questionEI[questionNumber]);
 		System.out.println("Select A or B");
 		char option = input.next().toUpperCase().charAt(0);
 		
@@ -53,7 +53,7 @@ public class MbtiPersonalityTest{
 				};
 
 	for(int questionNumber = 0; questionNumber < 5; questionNumber++){
-		System.out.println("Question" + questionNumber + ":" + " " + (questionSN[questionNumber]));
+		System.out.println("Question" + (questionNumber+1) + ":" + " " + (questionSN[questionNumber]));
 		System.out.println("Select A or B");
 		char option = input.next().toUpperCase().charAt(0);
 		
@@ -83,7 +83,7 @@ public class MbtiPersonalityTest{
 				};
 
 	for(int questionNumber = 0; questionNumber < 5; questionNumber++){
-		System.out.println("Question" + questionNumber + ":" + " " + (questionTF[questionNumber]));
+		System.out.println("Question" + (questionNumber+1) + ":" + " " + (questionTF[questionNumber]));
 		System.out.println("Select A or B");
 		char option = input.next().toUpperCase().charAt(0);
 		
@@ -113,7 +113,7 @@ public class MbtiPersonalityTest{
 				};
 
 	for(int questionNumber = 0; questionNumber < 5; questionNumber++){
-		System.out.println("Question" + questionNumber + ":" + " " + (questionJP[questionNumber]));
+		System.out.println("Question" + (questionNumber+1) + ":" + " " + (questionJP[questionNumber]));
 		System.out.println("Select A or B");
 		char option = input.next().toUpperCase().charAt(0);
 		
