@@ -2,14 +2,22 @@ public class CreditCardValidator{
 
 	private String cardNumber;
 
-   	public int checkCardLength(String cardNumber){
+	public void setCardNumber(String cardNumber){
 		this.cardNumber = cardNumber;
-		int cardLength = cardNumber.length();
-		if (cardLength >= 13 && cardLength <= 16){
-			return cardLength;
-		} else {
-			throw new IllegalArgumentException("Invalid card number");
-		}
+	}
+
+	public String getCardNumber(){
+		return cardNumber;
+	}
+
+   	public String checkCardLength(String cardNumber) {
+    		this.cardNumber = cardNumber;
+    		int cardLength = cardNumber.length();
+    		if (cardLength >= 13 && cardLength <= 16) {
+        		return Integer.toString(cardLength);
+    		} else {
+       			throw new IllegalArgumentException("Invalid card number");
+    		}
 	}
 
 	public int addUpDigitsFromRightToLeft(String cardNumber){
@@ -50,4 +58,41 @@ public class CreditCardValidator{
 		}
 		return total;
 	}
+	
+	public String checkCardValidity(String cardNumber){
+		this.cardNumber = cardNumber;
+
+		if(addUpDigitsFromRightToLeft(cardNumber) + addUpDigitsInOddPlaces(cardNumber) % 10 == 0){
+			return "The card is valid";
+		}
+		else{
+			return "The card is invalid";
+		}
+	}
+
+	public String checkCardType(String cardNumber){
+		this.cardNumber = cardNumber;
+
+		if(cardNumber.charAt(0) == '4'){
+			return "Visacard";
+		} else if (cardNumber.charAt(0) == '5'){
+			return "MasterCard";
+		} else if (cardNumber.charAt(0) == '3' && cardNumber.charAt(1) == '7'){
+			return "American Express Card";
+		} else if(cardNumber.charAt(0) == '6'){
+			return "Discover cards";
+		} else {
+			throw new IllegalArgumentException("Invalid number!!!");
+		}
+	}
+		
+		public String[] displayCardDetails(String cardNumber) {
+        	return new String[]{
+            		checkCardType(cardNumber),
+            		cardNumber,
+            		checkCardLength(cardNumber),
+            		checkCardValidity(cardNumber)
+        		};
+    		}
+
 }
