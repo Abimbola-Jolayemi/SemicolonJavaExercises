@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class MenstrualPalava{
 
 	private int month;
@@ -104,4 +107,42 @@ public class MenstrualPalava{
 			}
 			return String.format("%02d-%02d-%04d", endOvulationDate, nextMonth, nextYear);
 		}
+
+		public List<String> getFertileDays() {
+    			List<String> fertileDays = new ArrayList<>();
+    			int nextMonth = month;
+    			int nextYear = year;
+    			int ovulationDay = date + cycleDuration - 14;
+    			int startFertilePeriod = ovulationDay - 5;
+    			int endFertilePeriod = ovulationDay + 1;
+
+    			for (int i = startFertilePeriod; i <= endFertilePeriod; i++) {
+        			int day = i;
+        			int monthDays = getDaysInMonth();
+
+        			while (day > monthDays) {
+            				day -= monthDays;
+            				nextMonth++;
+            				if (nextMonth > 12) {
+                				nextMonth = 1;
+                				nextYear++;
+            				}
+            				monthDays = getDaysInMonth();
+        			}
+
+        			while (day <= 0) {
+            				nextMonth--;
+            				if (nextMonth < 1) {
+                				nextMonth = 12;
+               					nextYear--;
+            				}
+            				monthDays = getDaysInMonth();
+            				day += monthDays;
+        			}
+
+        		fertileDays.add(String.format("%02d-%02d-%04d", day, nextMonth, nextYear));
+   		 }
+    		return fertileDays;
+	}
+
 }
