@@ -28,7 +28,8 @@ public class MenstrualCycle{
 	System.out.println("The next cycle date is: " + nextCycle);
 	System.out.println("The date of ending the next period is: " + endBleedingDate);
 	System.out.println("The next ovulation period should be around: " + nextOvulationData); 
-	System.out.println("The safe days are: " + cycle.getFertileDays());
+	System.out.println("The end of the next cycle is on : " + cycle.getEndOfNextCycle());
+	System.out.println("The safe days on the cycle are : " + cycle.getFertileDays());
 
    }
 }
