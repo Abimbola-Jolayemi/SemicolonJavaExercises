@@ -17,10 +17,18 @@ public class MenstrualCycle{
 	System.out.print("Enter cycle duration: ");
 	int cycleDuration = input.nextInt();
 
-	MenstrualPalava cycle = new MenstrualPalava(month, date, year, cycleDuration);
-	String nextCycle = cycle.getNextCycleDate();
+	System.out.print("Enter bleeding duration: ");
+	int bleedingDuration = input.nextInt();
 
-	System.out.print("The next cycle date is: " + nextCycle);
+	MenstrualPalava cycle = new MenstrualPalava(month, date, year, cycleDuration, bleedingDuration);
+	String nextCycle = cycle.getNextCycleDate();
+	String endBleedingDate = cycle.getEndBleedingDate();
+	String nextOvulationData = cycle.getOvulationPeriod();
+
+	System.out.println("The next cycle date is: " + nextCycle);
+	System.out.println("The date of ending the next period is: " + endBleedingDate);
+	System.out.println("The next ovulation period should be around: " + nextOvulationData); 
 	
+
    }
 }
