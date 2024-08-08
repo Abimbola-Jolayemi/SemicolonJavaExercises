@@ -11,9 +11,16 @@ public class CreditCardValidityTest{
 	}
 
 	@Test
-	public void testThatChecksForCardValidity(){
+	public void testThatAddsUpDigitsFromRightToLeft(){
 		CreditCardValidator validator = new CreditCardValidator();
-		boolean result = validator.checkCardValidity("4388576018410707");
-		assertEquals(true, result);
+		int result = validator.addUpDigitsFromRightToLeft("4388576018402626");
+		assertEquals(37, result);
+	}
+
+	@Test
+	public void testThatAddsUpDigitsInOddIndex(){
+		CreditCardValidator validator = new CreditCardValidator();
+		int result = validator.addUpDigitsInOddPlaces("4388576018402626");
+		assertEquals(38, result);
 	}
 }
