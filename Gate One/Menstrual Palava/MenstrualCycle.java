@@ -20,7 +20,7 @@ public class MenstrualCycle{
 	System.out.print("Enter bleeding duration: ");
 	int bleedingDuration = input.nextInt();
 
-	MenstrualPalava cycle = new MenstrualPalava(month, date, year, cycleDuration, bleedingDuration);
+	MenstrualWahala cycle = new MenstrualWahala(month, date, year, cycleDuration, bleedingDuration);
 	String nextCycle = cycle.getNextCycleDate();
 	String endBleedingDate = cycle.getEndBleedingDate();
 	String nextOvulationData = cycle.getOvulationPeriod();

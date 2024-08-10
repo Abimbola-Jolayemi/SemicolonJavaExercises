@@ -18,9 +18,11 @@ public class CreditCardValidator{
 	String cardLength = cardValidity[2];
 	String validityOfCard = cardValidity[3];
 
+	System.out.println("***********************************");
 	System.out.println("Card Type: " + cardType);
 	System.out.println("Card Number: " + cardNo);
 	System.out.println("card Length: " + cardLength);
 	System.out.println("Card Validity: " + validityOfCard);
+	System.out.println("***********************************");
    }
 }
