@@ -71,12 +71,12 @@ public class MenstrualCycleFunction{
 	public ArrayList<LocalDate> getSecondSafeDays(){
 		ArrayList<LocalDate> secondSafeDays = new ArrayList<>();
         	LocalDate startDate = getFertileEndDate().plusDays(1);
-        	LocalDate endDate = getNextCycleDate().minusDays(1);
+        	LocalDate endDate = getNextCycleDate();
 
         	while (!startDate.isAfter(endDate)) {
         		secondSafeDays.add(startDate);
         		startDate = startDate.plusDays(1);
-    		}s
+    		}
        		return secondSafeDays;
 	}
 	
