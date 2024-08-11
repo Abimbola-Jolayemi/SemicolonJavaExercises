@@ -40,6 +40,7 @@ public class PhonebookMain{
 		   break;
 
 		case 2:
+			System.out.println("********************************************");
 			phonebook.displayContacts();
 			System.out.println();
 			System.out.println("********************************************");
@@ -65,7 +66,7 @@ public class PhonebookMain{
 
 			System.out.println();
 			System.out.println("********************************************");
-    			break;
+    		break;
 
 		case 4:
     			input.nextLine();
@@ -74,7 +75,8 @@ public class PhonebookMain{
 
     			String[] contact = phonebook.findContactByPhoneNumber(phoneNumberToSearch);
     			if (contact != null) {
-        			System.out.println("Contact found:");
+				System.out.println("********************************************");
+        			System.out.println("Contact Information:");
         			System.out.println("First Name: " + contact[0]);
         			System.out.println("Last Name: " + contact[1]);
         			System.out.print("Phone Numbers: ");
@@ -91,10 +93,91 @@ public class PhonebookMain{
     
     				System.out.println();
     				System.out.println("********************************************");
-    				break;
+    		break;
+
+		case 5:
+			input.nextLine();
+			System.out.print("Search Contact by first name: ");
+			String firstNameToSearch = input.nextLine().trim();
+
+			String[] firstnameContact = phonebook.findContactByFirstName(firstNameToSearch);
+			if(firstnameContact != null){
+				System.out.println("********************************************");
+				System.out.println("Contact Information:");
+        			System.out.println("First Name: " + firstnameContact[0]);
+        			System.out.println("Last Name: " + firstnameContact[1]);
+        			System.out.print("Phone Numbers: ");
+				for (int index = 2; index < firstnameContact.length; index++) {
+            				System.out.print(firstnameContact[index]);
+            				if (index < firstnameContact.length - 1) {
+                				System.out.print(", ");
+            				}
+        			}
+        				System.out.println();
+    				} else {
+        				System.out.println("No contact found with the phone number: " + firstNameToSearch);
+    				}
+    
+    				System.out.println();
+    				System.out.println("********************************************");
+    		break;
+
+		case 6:
+			input.nextLine();
+			System.out.print("Search Contact by last name: ");
+			String lastNameToSearch = input.nextLine().trim();
+
+			String[] lastnameContact = phonebook.findContactByLastName(lastNameToSearch);
+			if(lastnameContact != null){
+				System.out.println("********************************************");
+				System.out.println("Contact Information:");
+        			System.out.println("First Name: " + lastnameContact[0]);
+        			System.out.println("Last Name: " + lastnameContact[1]);
+        			System.out.print("Phone Numbers: ");
+				for (int index = 2; index < lastnameContact.length; index++) {
+            				System.out.print(lastnameContact[index]);
+            				if (index < lastnameContact.length - 1) {
+                				System.out.print(", ");
+            				}
+        			}
+        				System.out.println();
+    				} else {
+        				System.out.println("No contact found with the phone number: " + lastNameToSearch);
+    				}
+    
+    				System.out.println();
+    				System.out.println("********************************************");
+    		break;
+
+		case 7:
+			System.out.println("********************************************");
+			System.out.println("Choose from the option below: ");
+			System.out.print("""
+	1. Edit First name
+	2. Edit last name
+	3. Edit Phone number
+""");
+
+			int editSelection = input.nextInt();
+                    	input.nextLine();
+
+                    	System.out.print("Enter the old feature: ");
+                    	String oldFeature = input.nextLine();
+
+                    	System.out.print("Enter the new feature: ");
+                    	String newFeature = input.nextLine();
+
+                    	phonebook.editContactFeature(editSelection, newFeature, oldFeature);
+                    	break;
+
+		case 0:
+                    System.out.println("......Program exited");
+                    input.close();
+                    return;
+			
 		default:
 			System.out.print("Invalid input!!!");
-	}
-   }
-	}
+		}
+       }
+    }
 }

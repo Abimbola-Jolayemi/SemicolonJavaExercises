@@ -162,6 +162,7 @@ public class PhonebookFunction{
 	5. Find Contacts by First name
 	6. Find Contacts by Last name
 	7. Edit Contact
+	0. Exit Program
 """);
 	}
 }

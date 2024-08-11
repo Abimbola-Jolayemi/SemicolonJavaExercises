@@ -44,11 +44,8 @@ public class CheckOutFunction{
 	}
 
 	public double computeBillsTotal(double discount, double vat, double totalPrice){
-		double vatAmount = (vat / 100) * totalPrice;
-		double discountAmount = (discount / 100) * totalPrice;
-		double billAmount = (vatAmount - discountAmount) + totalPrice;
-		this.billsTotal = billAmount;
-		return billsTotal;
+		
+		return billsTotal = (computeVATOnPrice(vat, totalPrice) - computeDiscountOnPrice(discount, totalPrice)) + totalPrice;
 	}
 
 	public double computeBalance(double amount, double billsTotal){

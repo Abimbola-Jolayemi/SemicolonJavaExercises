@@ -5,9 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CheckOutMain{
+static Scanner input = new Scanner(System.in);
+static double amountPaid = 0;
+static double billsTotal= 0;
+
+
    public static void main(String []args){
 
-	Scanner input = new Scanner(System.in);
+	
 	
 	LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm:ss a");
@@ -55,7 +60,7 @@ public class CheckOutMain{
 	double discountedPrice = checkout.computeDiscountOnPrice(discount, total);
 	double vatPrice = checkout.computeVATOnPrice(vat, total);
 
-	double billsTotal = checkout.computeBillsTotal(discount, vat, total);
+	billsTotal = checkout.computeBillsTotal(discount, vat, total);
 
 	System.out.println();
 
@@ -94,12 +99,27 @@ public class CheckOutMain{
 
 	System.out.println();
 	System.out.println();
-	
-	System.out.print("How did the customer give to you?: ");
-	double amountPaid = input.nextDouble();
 
-	double balance = checkout.computeBalance(amountPaid, billsTotal);
+
+
+
+
 	
+	System.out.print("How much did the customer give to you?: ");
+	amountPaid = input.nextDouble();
+	double amount = validatePayment();
+
+
+
+
+
+	double balance = checkout.computeBalance(amount, billsTotal);
+	
+
+
+
+
+
 	System.out.println();
 	System.out.println();
 
@@ -140,4 +160,17 @@ public class CheckOutMain{
 	System.out.println("===============================================================================");
 
    }
+
+
+    private static double validatePayment(){
+	while(amountPaid < billsTotal){
+		System.out.print("Enter a valid amount: ");
+		System.out.print("How much did the customer give to you?: ");
+		amountPaid = input.nextDouble();
+	}
+	return amountPaid;
+    }
 }
+
+
+
