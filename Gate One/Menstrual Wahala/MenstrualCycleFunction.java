@@ -64,7 +64,6 @@ public class MenstrualCycleFunction{
         		firstSafeDays.add(startDate);
         		startDate = startDate.plusDays(1);
     		}
-
        		return firstSafeDays;
 	}
 
