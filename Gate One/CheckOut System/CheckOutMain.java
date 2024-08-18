@@ -1,7 +1,6 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class CheckOutMain{
@@ -12,8 +11,6 @@ static double billsTotal= 0;
 
    public static void main(String []args){
 
-	
-	
 	LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm:ss a");
         String formattedDate = now.format(formatter);
@@ -102,23 +99,13 @@ static double billsTotal= 0;
 
 
 
-
-
-	
 	System.out.print("How much did the customer give to you?: ");
 	amountPaid = input.nextDouble();
 	double amount = validatePayment();
 
 
-
-
-
 	double balance = checkout.computeBalance(amount, billsTotal);
 	
-
-
-
-
 
 	System.out.println();
 	System.out.println();
@@ -164,12 +151,13 @@ static double billsTotal= 0;
 
     private static double validatePayment(){
 	while(amountPaid < billsTotal){
-		System.out.print("Enter a valid amount: ");
+		System.out.println("Enter a valid amount: ");
 		System.out.print("How much did the customer give to you?: ");
 		amountPaid = input.nextDouble();
 	}
 	return amountPaid;
     }
+
 }
 
 

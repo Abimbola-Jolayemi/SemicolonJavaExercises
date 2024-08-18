@@ -44,7 +44,6 @@ public class CheckOutFunction{
 	}
 
 	public double computeBillsTotal(double discount, double vat, double totalPrice){
-		
 		return billsTotal = (computeVATOnPrice(vat, totalPrice) - computeDiscountOnPrice(discount, totalPrice)) + totalPrice;
 	}
 
