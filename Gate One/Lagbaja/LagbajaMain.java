@@ -10,5 +10,6 @@ public class LagbajaMain{
 	lagbaja.setNoOfSubjects();
 	
 	lagbaja.collectScores();
+
    }
 }
