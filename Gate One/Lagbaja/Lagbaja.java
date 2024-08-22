@@ -8,6 +8,9 @@ public class Lagbaja{
 	private int noOfStudents;
 	private int noOfSubjects;
 	private int[][] scores;
+	private int[] totalPerStudent;
+	private double[] averageScores;
+	private int[] positions;
 
 	public void setNoOfStudents(){
 		while(true){
@@ -72,7 +75,7 @@ public class Lagbaja{
 					try{
 						score = input.nextInt();
 						if(score < 0 || score > 100){
-							System.out.print("Invalid Score!!!. Enter a score between 0 and 100");
+							System.out.println("Invalid Score!!!. Enter a score between 0 and 100");
 						} else {
 							isValid = true;
 						}
@@ -93,8 +96,7 @@ public class Lagbaja{
     	}
 
 	public int[] computeTotalPerStudent() {
-    		int[][] scores = collectScores();
-    		int[] totalPerStudent = new int[this.noOfStudents];
+    		totalPerStudent = new int[this.noOfStudents];
 
         	for (int student = 0; student < noOfStudents; student++) {
         	   int total = 0;
@@ -110,20 +112,63 @@ public class Lagbaja{
 
 	public double[] computeAveragePerStudent(){
 		int[] total = computeTotalPerStudent();
-		double[] averageScore = new double[this.noOfStudents];
+		averageScores = new double[this.noOfStudents];
 
 		double average = 0;
 		for(int student = 0; student < total.length; student++){
 			average = (double) total[student] / noOfSubjects;
 
-			averageScore[student] = average;
+			averageScores[student] = average;
 		}
-		return averageScore;
+		return averageScores;
 	}
 
-	public int[] computePosition(){
-		int[] total = computeTotalPerStudent();
+	public int[] computePositions() {
+    		positions = new int[this.noOfStudents];
+    		Integer[] indices = new Integer[this.noOfStudents];
 
-		
+    		for (int index = 0; index < this.noOfStudents; index++) {
+        		indices[index] = index;
+    		}
+
+    		Arrays.sort(indices, (index1, index2) -> Integer.compare(totalPerStudent[index2], totalPerStudent[index1]));
+
+    		int currentPosition = 1;
+    		int previousTotal = -1;
+    		int sameRankCount = 0;
+
+    		for (int i = 0; i < this.noOfStudents; i++) {
+        		int studentIndex = indices[i];
+        		int currentTotal = totalPerStudent[studentIndex];
+
+        		if (currentTotal == previousTotal) {
+            			positions[studentIndex] = currentPosition;
+            			sameRankCount++;
+        		} else {
+            			currentPosition = i + 1;
+            			positions[studentIndex] = currentPosition;
+            			previousTotal = currentTotal;
+            			sameRankCount = 1;
+        		}
+    		}
+    			return positions;
 	}
+
+    public void displayResults() {
+        System.out.println("\nResults:");
+
+        System.out.printf("%-10s", "Student");
+        for (int subject = 0; subject < noOfSubjects; subject++) {
+            System.out.printf("%-10s", "Subject" + (subject + 1));
+        }
+        System.out.printf("%-10s%-10s%-10s\n", "Total", "Average", "Position");
+
+        for (int student = 0; student < noOfStudents; student++) {
+            System.out.printf("%-10s", "Student" + (student + 1));
+            for (int subject = 0; subject < noOfSubjects; subject++) {
+                System.out.printf("%-10d", scores[student][subject]);
+            }
+            System.out.printf("%-10d%-10.2f%-10d\n", totalPerStudent[student], averageScores[student], positions[student]);
+        }
+    }
 }
