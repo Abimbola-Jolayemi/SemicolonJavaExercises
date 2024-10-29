@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="517cd5e7-3986-45ed-892e-80f817b0ed6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiaryApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/diaryApp/Diary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/diaryApp/Entry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/diaryApp/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/diaryApp/DiaryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2nrmSRhaq7E0RFMOpGog1J2GlN7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DiaryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.testThatDairyIsLockedByDefault.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.testThatDiaryCanBeUnlocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.testThatDiaryCanBeUnlockedUsingTheDefaultPasswordOfTheDiary.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.testThatDiaryPasswordCanBeReset.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.diaryTest.testThatWhenAnEntryIsAdded_DiaryIsNotEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL USER/Desktop/ClassExercise/DiaryApp/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="diaryApp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.diaryTest.testThatDairyIsLockedByDefault">
+    <configuration name="diaryTest.testThatDairyIsLockedByDefault" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiaryApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diaryApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diaryApp" />
+      <option name="MAIN_CLASS_NAME" value="diaryApp.diaryTest" />
+      <option name="METHOD_NAME" value="testThatDairyIsLockedByDefault" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="diaryTest.testThatDiaryCanBeUnlocked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiaryApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diaryApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diaryApp" />
+      <option name="MAIN_CLASS_NAME" value="diaryApp.diaryTest" />
+      <option name="METHOD_NAME" value="testThatDiaryCanBeUnlocked" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="diaryTest.testThatDiaryCanBeUnlockedUsingTheDefaultPasswordOfTheDiary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiaryApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diaryApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diaryApp" />
+      <option name="MAIN_CLASS_NAME" value="diaryApp.diaryTest" />
+      <option name="METHOD_NAME" value="testThatDiaryCanBeUnlockedUsingTheDefaultPasswordOfTheDiary" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="diaryTest.testThatDiaryPasswordCanBeReset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiaryApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diaryApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diaryApp" />
+      <option name="MAIN_CLASS_NAME" value="diaryApp.diaryTest" />
+      <option name="METHOD_NAME" value="testThatDiaryPasswordCanBeReset" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="diaryTest.testThatWhenAnEntryIsAdded_DiaryIsNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiaryApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diaryApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diaryApp" />
+      <option name="MAIN_CLASS_NAME" value="diaryApp.diaryTest" />
+      <option name="METHOD_NAME" value="testThatWhenAnEntryIsAdded_DiaryIsNotEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.diaryTest.testThatWhenAnEntryIsAdded_DiaryIsNotEmpty" />
+        <item itemvalue="JUnit.diaryTest.testThatDiaryPasswordCanBeReset" />
+        <item itemvalue="JUnit.diaryTest.testThatDiaryCanBeUnlockedUsingTheDefaultPasswordOfTheDiary" />
+        <item itemvalue="JUnit.diaryTest.testThatDiaryCanBeUnlocked" />
+        <item itemvalue="JUnit.diaryTest.testThatDairyIsLockedByDefault" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.387" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.387" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="517cd5e7-3986-45ed-892e-80f817b0ed6a" name="Changes" comment="" />
+      <created>1729739572338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729739572338</updated>
+      <workItem from="1729739573637" duration="9764000" />
+      <workItem from="1729823634876" duration="12622000" />
+      <workItem from="1729844593860" duration="1079000" />
+      <workItem from="1729952421591" duration="1445000" />
+      <workItem from="1730012147482" duration="1308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
