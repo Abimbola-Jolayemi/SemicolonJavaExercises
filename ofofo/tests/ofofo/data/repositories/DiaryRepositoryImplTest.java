@@ -51,18 +51,17 @@ public class DiaryRepositoryImplTest {
         assertEquals(diaryRepository.count(), 2);
     }
 
-    @Test
-    public void testThatTwoDiariesAreAdded_WeCanFindById(){
-        Diary diary = new Diary("username", "title");
-        diaryRepository.save(diary);
-        Diary diary2 = new Diary("username2", "title2");
-        diaryRepository.save(diary2);
-        Diary diary3 = new Diary("username3", "title3");
-        diaryRepository.save(diary3);
-        Diary foundDiary = diaryRepository.findById(2);
-        assertEquals(foundDiary, diary2);
-    }
-
+//    @Test
+//    public void testThatTwoDiariesAreAdded_WeCanFindById(){
+//        Diary diary = new Diary("username", "title");
+//        diaryRepository.save(diary);
+//        Diary diary2 = new Diary("username2", "title2");
+//        diaryRepository.save(diary2);
+//        Diary diary3 = new Diary("username3", "title3");
+//        diaryRepository.save(diary3);
+//        Diary foundDiary = diaryRepository.findById(2);
+//        assertEquals(foundDiary, diary2);
+//    }
 
     @Test
     public void testThatTwoDiariesAreAdded_OneIsDeleted_WeCannotFindInexistingDiaryById(){

@@ -85,30 +85,22 @@ public class DiaryServiceImplTest {
         assertTrue(diary.isLocked());
     }
 
-//    @Test
-//    public void testThatARegisteredDiaryUserCanCreateAnEntry_weCanGetTitleOfNewEntry(){
-//        diaryService.register("Abimbola", "0000");
-//        Diary diary = diaryService.login("Abimbola", "0000");
-//        Entry myEntry = new Entry("my title", "my diary body");
-//        entryServices.createEntry(myEntry);
-//        Entry createdEntry = entryServices.getEntry(1);
-//        diary.setEntry(createdEntry);
-//        assertEquals(1, diaryService.numberOfUsers());
-//        assertEquals("my title", diary.getEntries().get(0).getTitle());
-//    }
-//
-//    @Test
-//    public void testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone(){
-//        diaryService.register("Abimbola", "0000");
-//        diaryService.register("Jolayemi", "1111");
-//        Diary diary = diaryService.login("Jolayemi", "1111");
-//        entryServices.createEntry(new Entry("my title", "my diary body"));
-//        entryServices.createEntry(new Entry("Second title", "Second entry"));
-//        Entry createdEntry = entryServices.getEntry(2);
-//        diary.setEntry(createdEntry);
-//        diary.setEntry(entryServices.getEntry(1));
-//        assertEquals(2, diaryService.numberOfUsers());
-//        assertEquals("my title", diary.getEntries().get(1).getTitle());
-//    }
+    @Test
+    public void testThatMultipleUsersCanCreateEntries_theIDofEachUserCanBeGotten(){
+        diaryService.register("Abimbola", "0000");
+        diaryService.register("jolayemi", "1111");
+        Diary diary = diaryService.login("Abimbola", "0000");
+        Diary diary2 = diaryService.login("jolayemi", "1111");
+        assertEquals("Abimbola", diary.getUsername());
+        assertEquals("jolayemi", diary2.getUsername());
+    }
+
+    @Test
+    public void testThatEntryIdCanBeCreatedForDifferentDiaries(){
+        diaryService.register("Abimbola", "0000");
+        diaryService.register("jolayemi", "1111");
+        Diary diary = diaryService.login("Abimbola", "0000");
+        Diary diary2 = diaryService.login("jolayemi", "1111");
+    }
 
 }

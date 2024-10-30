@@ -6,9 +6,8 @@ import java.util.List;
 public class Diary {
     private String username;
     private String password;
-    private int diaryId;
+    private int lastCount;
     private boolean isLocked = true;
-    private final List<Entry> entries = new ArrayList<>();
 
     public Diary() {}
 
@@ -33,12 +32,12 @@ public class Diary {
         this.password = password;
     }
 
-    public void setDiaryId(int diaryId) {
-        this.diaryId = diaryId;
+    public void setLastCount(int count) {
+        this.lastCount = lastCount;
     }
 
-    public int getDiaryId() {
-        return diaryId;
+    public int getLastCount() {
+        return lastCount;
     }
 
     public boolean isLocked() {
@@ -49,11 +48,4 @@ public class Diary {
         isLocked = locked;
     }
 
-    public List<Entry> getEntries() {
-        return entries;
-    }
-
-    public void setEntry(Entry entry) {
-        entries.add(entry);
-    }
 }

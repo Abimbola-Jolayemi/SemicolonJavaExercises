@@ -41,4 +41,6 @@ public class DiaryServiceImpl implements DiaryService {
     public void logout(Diary diary) {
         diary.setLock(true);
     }
+
+
 }

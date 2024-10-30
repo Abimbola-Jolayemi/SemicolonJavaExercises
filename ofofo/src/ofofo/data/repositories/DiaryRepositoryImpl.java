@@ -8,20 +8,17 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DiaryRepositoryImpl implements DiaryRepository{
-    private List<Diary> diaries= new ArrayList<>();
-    private int diaryId = 0;
-
+    private List<Diary> diaries = new ArrayList<>();
 
     @Override
     public void save(Diary diary) {
-        diary.setDiaryId(assignId());
         diaries.add(diary);
     }
 
     @Override
     public Diary findById(int diaryID) {
         for(Diary diary: diaries){
-            if(diary.getDiaryId() == diaryID){
+            if(diary.getLastCount() == diaryID){
                 return diary;
             }
         }
@@ -58,8 +55,8 @@ public class DiaryRepositoryImpl implements DiaryRepository{
         return null;
     }
 
-    private int assignId(){
-        return ++diaryId;
-    }
+//    private int assignId(){
+//        return ++diaryId;
+//    }
 
 }

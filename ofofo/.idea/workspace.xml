@@ -39,6 +39,7 @@
     "JUnit.DiaryRepositoryImplTest.testThatTwoDiariesAreAdded_WeCannotFindInexistingDiaryById.executor": "Run",
     "JUnit.DiaryServiceImplTest.executor": "Run",
     "JUnit.DiaryServiceImplTest.testThatADiaryUserCanCreateAnEntry.executor": "Run",
+    "JUnit.DiaryServiceImplTest.testThatMultipleUsersCanCreateEntries_DiaryIdIsCreatedIndependentlyOfTheUsers.executor": "Run",
     "JUnit.DiaryServiceImplTest.testThatUserCanLogout_DiaryBecomesLocked.executor": "Run",
     "JUnit.DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone.executor": "Run",
     "JUnit.EntryRepositoryImplTest.executor": "Run",
@@ -85,7 +86,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiaryServiceImplTest.testThatMultipleUsersCanCreateEntries_DiaryIdIsCreatedIndependentlyOfTheUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ofofo" />
       <extension name="coverage">
         <pattern>
@@ -95,7 +96,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ofofo.services" />
       <option name="MAIN_CLASS_NAME" value="ofofo.services.DiaryServiceImplTest" />
-      <option name="METHOD_NAME" value="testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" />
+      <option name="METHOD_NAME" value="testThatMultipleUsersCanCreateEntries_DiaryIdIsCreatedIndependentlyOfTheUsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiaryServiceImplTest.testThatMultipleUsersCanCreateEntries_DiaryIdIsCreatedIndependentlyOfTheUsers" />
         <item itemvalue="JUnit.EntryServicesImplTest.testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
         <item itemvalue="JUnit.EntryServicesImplTest.testThatAnEntryCanBeGottenFromRepositoryUsingID" />
         <item itemvalue="JUnit.EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_numberOfEntriesDoesNotIncrease" />
         <item itemvalue="JUnit.EntryServicesImplTest.testThatTwoEntriesAreAddedTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
-        <item itemvalue="JUnit.DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +199,7 @@
       <workItem from="1730093953401" duration="11450000" />
       <workItem from="1730230476469" duration="3980000" />
       <workItem from="1730250876330" duration="15472000" />
+      <workItem from="1730273085818" duration="4299000" />
     </task>
     <servers />
   </component>
@@ -214,12 +216,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/tests/ofofo/data/repositories/DiaryRepositoryImplTest.java</url>
-          <line>67</line>
+          <line>66</line>
           <properties class="ofofo.data.repositories.DiaryRepositoryImplTest" method="testThatTwoDiariesAreAdded_OneIsDeleted_WeCannotFindInexistingDiaryById">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tests/ofofo/services/DiaryServiceImplTest.java</url>
+          <line>88</line>
+          <properties class="ofofo.services.DiaryServiceImplTest" method="testThatMultipleUsersCanCreateEntries_DiaryIdIsCreatedIndependentlyOfTheUsers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
