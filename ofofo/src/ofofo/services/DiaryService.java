@@ -8,4 +8,5 @@ public interface DiaryService {
     long numberOfUsers();
     Diary login(String username, String password);
     void logout(Diary diary);
+    void createEntry(String Username, Entry entry);
 }

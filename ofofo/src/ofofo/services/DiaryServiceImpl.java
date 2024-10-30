@@ -4,9 +4,12 @@ import ofofo.data.models.Diary;
 import ofofo.data.models.Entry;
 import ofofo.data.repositories.DiaryRepository;
 import ofofo.data.repositories.DiaryRepositoryImpl;
+import ofofo.data.repositories.EntryRepository;
+import ofofo.data.repositories.EntryRepositoryImpl;
 
 public class DiaryServiceImpl implements DiaryService {
     private DiaryRepository diaryRepository = new DiaryRepositoryImpl();
+    private EntryServices entryServices = new EntryServicesImpl();
 
     @Override
     public String register(String username, String Password) {
@@ -40,6 +43,13 @@ public class DiaryServiceImpl implements DiaryService {
     @Override
     public void logout(Diary diary) {
         diary.setLock(true);
+    }
+
+    @Override
+    public void createEntry(String username, Entry entry) {
+        Diary diary = diaryRepository.findByUsername(username);
+        diary.setLastCount(diary.getLastCount() + 1);
+        entryServices.createEntry(entry);
     }
 
 

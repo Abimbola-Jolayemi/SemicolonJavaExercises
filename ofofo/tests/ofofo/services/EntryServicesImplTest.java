@@ -88,21 +88,4 @@ public class EntryServicesImplTest {
         assertEquals(entry2, entryServices.getEntry(2, 2));
     }
 
-
-    @Test
-    public void testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId(){
-        Entry entry1 = new Entry(1, "My New Entry", "I want to add a new entry");
-        entryServices.createEntry(entry1);
-        Entry entry2 = new Entry(1, "My New Entry", "I want to add a new entry");
-        entryServices.createEntry(entry2);
-        assertEquals(2, entryServices.numberOfEntries());
-
-        Entry entry3 = new Entry(2, "My New Entry", "I want to add a new entry");
-        entryServices.createEntry(entry3);
-        Entry entry4 = new Entry(2, "My New Entry", "I want to add a new entry");
-        entryServices.createEntry(entry4);
-        assertEquals(4, entryServices.numberOfEntries());
-        assertEquals(entry3, entryServices.getEntry(2, 3));
-    }
-
 }

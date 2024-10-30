@@ -95,12 +95,4 @@ public class DiaryServiceImplTest {
         assertEquals("jolayemi", diary2.getUsername());
     }
 
-    @Test
-    public void testThatEntryIdCanBeCreatedForDifferentDiaries(){
-        diaryService.register("Abimbola", "0000");
-        diaryService.register("jolayemi", "1111");
-        Diary diary = diaryService.login("Abimbola", "0000");
-        Diary diary2 = diaryService.login("jolayemi", "1111");
-    }
-
 }

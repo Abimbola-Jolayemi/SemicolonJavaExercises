@@ -14,7 +14,7 @@ public class EntryServicesImpl implements EntryServices {
 
     @Override
     public void createEntry(Entry entry) {
-        entryRepository.saveEntry(entry);
+         entryRepository.saveEntry(entry);
     }
 
     @Override
