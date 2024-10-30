@@ -9,4 +9,5 @@ public interface DiaryRepository {
    long count();
    String getPassword(String Username);
    Diary findByUsername(String Username);
+
 }

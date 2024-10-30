@@ -60,20 +60,20 @@ public class DiaryRepositoryImplTest {
         Diary diary3 = new Diary("username3", "title3");
         diaryRepository.save(diary3);
         Diary foundDiary = diaryRepository.findById(2);
-        System.out.print("The found diary is:" + foundDiary.getUsername());
         assertEquals(foundDiary, diary2);
     }
 
-//    @Test
-//    public void testThatTwoDiariesAreAdded_WeCannotFindInexistingDiaryById(){
-//        Diary diary = new Diary("username", "title");
-//        diaryRepository.save(diary);
-//        Diary diary2 = new Diary("username2", "title2");
-//        diaryRepository.save(diary2);
-//        Diary diary3 = new Diary("username3", "title3");
-//        diaryRepository.save(diary3);
-//        diaryRepository.delete(diary2);
-//        assertThrows(NoSuchElementException.class, () -> diaryRepository.findById("username2"));
-//    }
+
+    @Test
+    public void testThatTwoDiariesAreAdded_OneIsDeleted_WeCannotFindInexistingDiaryById(){
+        Diary diary = new Diary("username", "title");
+        diaryRepository.save(diary);
+        Diary diary2 = new Diary("username2", "title2");
+        diaryRepository.save(diary2);
+        Diary diary3 = new Diary("username3", "title3");
+        diaryRepository.save(diary3);
+        diaryRepository.delete(diary2);
+        assertEquals(null, diaryRepository.findById(2));
+    }
 
 }

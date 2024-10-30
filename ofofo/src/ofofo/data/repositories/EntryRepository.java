@@ -7,4 +7,6 @@ public interface EntryRepository {
     long countEntry();
     void deleteEntry(Entry entry);
     Entry findEntryById(int id);
+    Entry findEntryByTitle(String title);
+    Entry findEntryByDiaryId(int diaryId, int entryId);
 }

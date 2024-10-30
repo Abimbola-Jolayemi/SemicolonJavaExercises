@@ -3,22 +3,23 @@ package ofofo.data.models;
 import java.time.LocalDate;
 
 public class Entry {
-    private int id;
+    private long id;
     private String title;
     private String body;
     private LocalDate date = LocalDate.now();
+    private int diaryId;
 
-    public Entry(int id, String title, String body) {
+    public Entry(int diaryId, String title, String body) {
         this.title = title;
         this.body = body;
-        this.id = id;
+        this.diaryId = diaryId;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -40,6 +41,14 @@ public class Entry {
 
     public LocalDate getDate() {
         return date;
+    }
+
+    public int getDiaryId() {
+        return diaryId;
+    }
+
+    public void setDiaryId(int diaryId) {
+        this.diaryId = diaryId;
     }
 
 }

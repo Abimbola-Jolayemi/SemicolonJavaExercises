@@ -8,16 +8,13 @@ public class Diary {
     private String password;
     private int diaryId;
     private boolean isLocked = true;
+    private final List<Entry> entries = new ArrayList<>();
 
     public Diary() {}
 
     public Diary(String username, String password) {
         this.username = username;
         this.password = password;
-    }
-
-    private int assignID(){
-        return this.diaryId++;
     }
 
     public String getUsername() {
@@ -48,7 +45,15 @@ public class Diary {
         return isLocked;
     }
 
-    public void setLocked(boolean locked) {
+    public void setLock(boolean locked) {
         isLocked = locked;
+    }
+
+    public List<Entry> getEntries() {
+        return entries;
+    }
+
+    public void setEntry(Entry entry) {
+        entries.add(entry);
     }
 }

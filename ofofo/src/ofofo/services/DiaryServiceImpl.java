@@ -1,6 +1,7 @@
 package ofofo.services;
 
 import ofofo.data.models.Diary;
+import ofofo.data.models.Entry;
 import ofofo.data.repositories.DiaryRepository;
 import ofofo.data.repositories.DiaryRepositoryImpl;
 
@@ -26,7 +27,7 @@ public class DiaryServiceImpl implements DiaryService {
     public Diary login(String username, String password) {
         if(diaryRepository.findByUsername(username) != null) {
             if(diaryRepository.findByUsername(username).getPassword().equals(password)) {
-                diaryRepository.findByUsername(username).setLocked(false);
+                diaryRepository.findByUsername(username).setLock(false);
                 return diaryRepository.findByUsername(username);
             } else{
                 throw new IllegalArgumentException("Wrong password!!!");
@@ -37,7 +38,7 @@ public class DiaryServiceImpl implements DiaryService {
     }
 
     @Override
-    public Diary logout(long id) {
-        return null;
+    public void logout(Diary diary) {
+        diary.setLock(true);
     }
 }

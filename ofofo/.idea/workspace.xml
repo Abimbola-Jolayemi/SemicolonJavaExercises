@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77a2a8ec-ffb9-4116-a73f-bd1016305737" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ofofo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/models/Diary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/models/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/repositories/DiaryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/repositories/DiaryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/repositories/EntryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/data/repositories/EntryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/services/DiaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/services/DiaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/services/EntryServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ofofo/services/EntryServicesImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ofofo/data/repositories/DiaryRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ofofo/data/repositories/EntryRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ofofo/services/DiaryServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ofofo/services/EntryServicesImplTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="77a2a8ec-ffb9-4116-a73f-bd1016305737" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -59,9 +36,20 @@
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.DiaryRepositoryImplTest.executor": "Run",
     "JUnit.DiaryRepositoryImplTest.testThatTwoDiariesAreAdded_WeCanFindById.executor": "Run",
+    "JUnit.DiaryRepositoryImplTest.testThatTwoDiariesAreAdded_WeCannotFindInexistingDiaryById.executor": "Run",
     "JUnit.DiaryServiceImplTest.executor": "Run",
+    "JUnit.DiaryServiceImplTest.testThatADiaryUserCanCreateAnEntry.executor": "Run",
+    "JUnit.DiaryServiceImplTest.testThatUserCanLogout_DiaryBecomesLocked.executor": "Run",
+    "JUnit.DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone.executor": "Run",
     "JUnit.EntryRepositoryImplTest.executor": "Run",
+    "JUnit.EntryRepositoryImplTest.testThatRepositoryCannotGetADeletedEntryByItsID.executor": "Run",
+    "JUnit.EntryRepositoryImplTest.testThatWhenOneEntryIsAddedToRepository_entryIdIsOne.executor": "Run",
+    "JUnit.EntryRepositoryImplTest.testThatWhenThreeEntryIsSaved_OneIsDeleted_AndAnotherEntryIsAdded_newEntryIdIsFour.executor": "Run",
     "JUnit.EntryServicesImplTest.executor": "Run",
+    "JUnit.EntryServicesImplTest.testThatAnEntryCanBeGottenFromRepositoryUsingID.executor": "Run",
+    "JUnit.EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_numberOfEntriesDoesNotIncrease.executor": "Run",
+    "JUnit.EntryServicesImplTest.testThatTwoEntriesAreAddedTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId.executor": "Run",
+    "JUnit.EntryServicesImplTest.testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId.executor": "Run",
     "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "true",
@@ -96,24 +84,24 @@
       <recent name="ofofo.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_EntryBodyIsChanged">
-    <configuration name="DiaryRepositoryImplTest.testThatTwoDiariesAreAdded_WeCanFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ofofo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ofofo.data.repositories.*" />
+          <option name="PATTERN" value="ofofo.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ofofo.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="ofofo.data.repositories.DiaryRepositoryImplTest" />
-      <option name="METHOD_NAME" value="testThatTwoDiariesAreAdded_WeCanFindById" />
+      <option name="PACKAGE_NAME" value="ofofo.services" />
+      <option name="MAIN_CLASS_NAME" value="ofofo.services.DiaryServiceImplTest" />
+      <option name="METHOD_NAME" value="testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_EntryBodyIsChanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EntryServicesImplTest.testThatAnEntryCanBeGottenFromRepositoryUsingID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ofofo" />
       <extension name="coverage">
         <pattern>
@@ -123,7 +111,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="ofofo.services" />
       <option name="MAIN_CLASS_NAME" value="ofofo.services.EntryServicesImplTest" />
-      <option name="METHOD_NAME" value="testThatAnEntryInTheRepositoryCanBeUpdated_EntryBodyIsChanged" />
+      <option name="METHOD_NAME" value="testThatAnEntryCanBeGottenFromRepositoryUsingID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_numberOfEntriesDoesNotIncrease" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ofofo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ofofo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ofofo.services" />
+      <option name="MAIN_CLASS_NAME" value="ofofo.services.EntryServicesImplTest" />
+      <option name="METHOD_NAME" value="testThatAnEntryInTheRepositoryCanBeUpdated_numberOfEntriesDoesNotIncrease" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryServicesImplTest.testThatTwoEntriesAreAddedTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ofofo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ofofo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ofofo.services" />
+      <option name="MAIN_CLASS_NAME" value="ofofo.services.EntryServicesImplTest" />
+      <option name="METHOD_NAME" value="testThatTwoEntriesAreAddedTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryServicesImplTest.testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ofofo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ofofo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ofofo.services" />
+      <option name="MAIN_CLASS_NAME" value="ofofo.services.EntryServicesImplTest" />
+      <option name="METHOD_NAME" value="testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,8 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_EntryBodyIsChanged" />
-        <item itemvalue="JUnit.DiaryRepositoryImplTest.testThatTwoDiariesAreAdded_WeCanFindById" />
+        <item itemvalue="JUnit.EntryServicesImplTest.testThatTwoEntriesAreCreatedByTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
+        <item itemvalue="JUnit.EntryServicesImplTest.testThatAnEntryCanBeGottenFromRepositoryUsingID" />
+        <item itemvalue="JUnit.EntryServicesImplTest.testThatAnEntryInTheRepositoryCanBeUpdated_numberOfEntriesDoesNotIncrease" />
+        <item itemvalue="JUnit.EntryServicesImplTest.testThatTwoEntriesAreAddedTwoDifferentDiaryIds_WeCanGetIdsIndependentlyUsingTheDiaryIdAndEntryId" />
+        <item itemvalue="JUnit.DiaryServiceImplTest.testThatWhenTwoUsersRegistersAndCreatesNewEntries_WeCanGetBodyOfUser2Alone" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +196,8 @@
       <workItem from="1729952401596" duration="8925000" />
       <workItem from="1730012140563" duration="1258000" />
       <workItem from="1730093953401" duration="11450000" />
+      <workItem from="1730230476469" duration="3980000" />
+      <workItem from="1730250876330" duration="15472000" />
     </task>
     <servers />
   </component>
@@ -170,6 +211,15 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tests/ofofo/data/repositories/DiaryRepositoryImplTest.java</url>
+          <line>67</line>
+          <properties class="ofofo.data.repositories.DiaryRepositoryImplTest" method="testThatTwoDiariesAreAdded_OneIsDeleted_WeCannotFindInexistingDiaryById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

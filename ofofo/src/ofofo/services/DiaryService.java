@@ -1,10 +1,11 @@
 package ofofo.services;
 
 import ofofo.data.models.Diary;
+import ofofo.data.models.Entry;
 
 public interface DiaryService {
     String register(String username, String password);
     long numberOfUsers();
     Diary login(String username, String password);
-    Diary logout(long id);
+    void logout(Diary diary);
 }
